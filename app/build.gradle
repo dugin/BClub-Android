@@ -1,0 +1,263 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.getkeepsafe.dexcount'
+
+def final appConfig = [
+        "id": "io.bclub",
+        "website": "http://www.bclub.io",
+        "email": "contato@bclub.io",
+
+        "versions": [
+                "support_library": "24.0.0",
+                "leak_canary": "1.4-beta2",
+                "dagger": "2.5",
+                "butterknife": "8.1.0",
+                "stetho": "1.3.1",
+                "google_play_services": "8.4.0"
+        ],
+
+        production: [
+                "use_log": "false",
+                "backendless_app_version": "\"v1\"",
+                "backendless_app_id": "\"6EBD10E2-F126-8686-FFE2-92665224C200\"",
+                "backendless_android_key": "\"8EEB600E-96AB-B968-FF98-72464A08B200\"",
+                "stripe_key": "\"pk_live_yOjCb65RKhc5uUuNPh0q87xq\"",
+                "manifest_placeholders": [
+                        "app_id": "io.bclub",
+                        "google_developers_key": "AIzaSyCrUWndTCyzAjB4M2R_O5Yhtueu3RDelS0",
+                        "google_project_number" : "\"258457575465\""
+                ]
+        ],
+
+        staging: [
+                "use_log": "true",
+                "backendless_app_version": "\"v1\"",
+                "backendless_app_id": "\"6EBD10E2-F126-8686-FFE2-92665224C200\"",
+                "backendless_android_key": "\"8EEB600E-96AB-B968-FF98-72464A08B200\"",
+                "stripe_key": "\"pk_test_XLUgCIsHtBQtHa9bZBVKKI7q\"",
+                "manifest_placeholders": [
+                        "app_id": "io.bclub",
+                        "google_developers_key": "AIzaSyCrUWndTCyzAjB4M2R_O5Yhtueu3RDelS0",
+                        "google_project_number" : "\"258457575465\""
+                ]
+        ],
+
+        development: [
+                "use_log": "true",
+                "backendless_app_version": "\"v1\"",
+                "backendless_app_id": "\"6EBD10E2-F126-8686-FFE2-92665224C200\"",
+                "backendless_android_key": "\"8EEB600E-96AB-B968-FF98-72464A08B200\"",
+                "stripe_key": "\"pk_test_XLUgCIsHtBQtHa9bZBVKKI7q\"",
+                "manifest_placeholders": [
+                        "app_id": "io.bclub",
+                        "google_developers_key": "AIzaSyCrUWndTCyzAjB4M2R_O5Yhtueu3RDelS0",
+                        "google_project_number" : "\"258457575465\""
+                ]
+        ]
+]
+
+def generateVersionCode() {
+    try {
+        def cmd = 'git rev-list --count HEAD'
+        cmd.execute().text.trim().toInteger()
+    } catch (ignored) {
+        1
+    }
+}
+
+def generateVersionName() {
+    try {
+        def cmd = 'git describe --tags --abbrev=0'
+        cmd.execute().text.trim()
+    } catch (ignored) {
+        "1.0"
+    }
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "$appConfig.id"
+
+        minSdkVersion 16
+        targetSdkVersion 24
+
+        versionCode 1
+        versionName "0.0.0"
+
+        resConfigs "en", "pt-rBR"
+
+        buildConfigField "String", "WEBSITE", "\"$appConfig.website\""
+        buildConfigField "String", "CONTACT_EMAIL", "\"$appConfig.email\""
+
+        resValue "string", "email", "$appConfig.email"
+        resValue "string", "website", "$appConfig.website"
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+        preDexLibraries true
+        incremental true
+        dexInProcess = true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("bclub.jks")
+            storePassword "bclub2016"
+            keyAlias "BCLUB"
+            keyPassword "bclub2016"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+
+            signingConfig signingConfigs.release
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+        def BOOLEAN = "boolean"
+        def STRING = "String"
+
+        def USE_LOG = "USE_LOG"
+
+        def GOOGLE_PROJECT_NUMBER = "GOOGLE_PROJECT_NUMBER"
+        def BACKENDLESS_APP_VERSION = "BACKENDLESS_APP_VERSION"
+        def BACKENDLESS_ANDROID_KEY = "BACKENDLESS_ANDROID_KEY"
+        def BACKENDLESS_APP_ID = "BACKENDLESS_APP_ID"
+        def STRIPE_KEY = "STRIPE_KEY"
+
+        production {
+            buildConfigField BOOLEAN, USE_LOG, "$appConfig.production.use_log"
+
+            buildConfigField STRING, GOOGLE_PROJECT_NUMBER, "$appConfig.production.manifest_placeholders.google_project_number"
+            buildConfigField STRING, BACKENDLESS_APP_VERSION, "$appConfig.production.backendless_app_version"
+            buildConfigField STRING, BACKENDLESS_APP_ID, "$appConfig.production.backendless_app_id"
+            buildConfigField STRING, BACKENDLESS_ANDROID_KEY, "$appConfig.production.backendless_android_key"
+
+            buildConfigField STRING, STRIPE_KEY, "$appConfig.production.stripe_key"
+
+            manifestPlaceholders = appConfig.production.manifest_placeholders
+        }
+
+        staging {
+            buildConfigField BOOLEAN, USE_LOG, "$appConfig.staging.use_log"
+
+            buildConfigField STRING, GOOGLE_PROJECT_NUMBER, "$appConfig.staging.manifest_placeholders.google_project_number"
+            buildConfigField STRING, BACKENDLESS_APP_VERSION, "$appConfig.staging.backendless_app_version"
+            buildConfigField STRING, BACKENDLESS_APP_ID, "$appConfig.staging.backendless_app_id"
+            buildConfigField STRING, BACKENDLESS_ANDROID_KEY, "$appConfig.staging.backendless_android_key"
+
+            buildConfigField STRING, STRIPE_KEY, "$appConfig.staging.stripe_key"
+
+            manifestPlaceholders = appConfig.staging.manifest_placeholders
+        }
+
+        development {
+            buildConfigField BOOLEAN, USE_LOG, "$appConfig.development.use_log"
+
+            buildConfigField STRING, GOOGLE_PROJECT_NUMBER, "$appConfig.development.manifest_placeholders.google_project_number"
+            buildConfigField STRING, BACKENDLESS_APP_VERSION, "$appConfig.development.backendless_app_version"
+            buildConfigField STRING, BACKENDLESS_APP_ID, "$appConfig.development.backendless_app_id"
+            buildConfigField STRING, BACKENDLESS_ANDROID_KEY, "$appConfig.development.backendless_android_key"
+
+            buildConfigField STRING, STRIPE_KEY, "$appConfig.development.stripe_key"
+
+            manifestPlaceholders = appConfig.development.manifest_placeholders
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+android.applicationVariants.all { variant ->
+    def mergedFlavor = variant.mergedFlavor
+
+    if (!variant.buildType.isDebuggable()) {
+        mergedFlavor.versionCode = 184
+        mergedFlavor.versionName = generateVersionName() + "." + 184
+    }
+}
+
+repositories {
+    // For ButterKnife
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.backendless:backendless:3.0.17.1'
+
+    compile "com.android.support:appcompat-v7:$appConfig.versions.support_library"
+    compile "com.android.support:design:$appConfig.versions.support_library"
+    compile "com.android.support:cardview-v7:$appConfig.versions.support_library"
+    compile "com.android.support:recyclerview-v7:$appConfig.versions.support_library"
+    compile "com.android.support:customtabs:$appConfig.versions.support_library"
+
+    compile "com.google.dagger:dagger:$appConfig.versions.dagger"
+    apt "com.google.dagger:dagger-compiler:$appConfig.versions.dagger"
+
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.stripe:stripe-android:1.0.4'
+
+    //API do Facebook
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+
+    compile "com.google.android.gms:play-services-maps:$appConfig.versions.google_play_services"
+    compile "com.google.android.gms:play-services-location:$appConfig.versions.google_play_services"
+    compile "com.google.android.gms:play-services-analytics:$appConfig.versions.google_play_services"
+
+    compile "com.jakewharton:butterknife:$appConfig.versions.butterknife"
+    apt "com.jakewharton:butterknife-compiler:$appConfig.versions.butterknife"
+
+    debugCompile "com.facebook.stetho:stetho:$appConfig.versions.stetho"
+
+    debugCompile "com.squareup.leakcanary:leakcanary-android:$appConfig.versions.leak_canary"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$appConfig.versions.leak_canary"
+}
+
+apt {
+    arguments {
+        resourcePackageName android.defaultConfig.applicationId
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

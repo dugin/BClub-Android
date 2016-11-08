@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/city_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/city_background"
+        android:foreground="?attr/selectableItemBackground">
+
+        <EditText
+            style="@style/AppTheme.AutoCompleteTextView"
+            android:id="@+id/et_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textCursorDrawable="@drawable/white_cursor"
+            android:drawablePadding="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:drawableStart="@drawable/ic_pin_city_top"
+            android:drawableLeft="@drawable/ic_pin_city_top"
+            android:background="@color/window_background"
+            android:imeOptions="actionSearch"
+            android:visibility="gone"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:hint="@string/search"
+            fontPath="fonts/OpenSans-Light.ttf"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textSize="20sp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_pin_city_top"
+            android:drawableLeft="@drawable/ic_pin_city_top"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            fontPath="fonts/OpenSans-Light.ttf"
+            tools:text="Cidade escolhida"
+            tools:ignore="MissingPrefix" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/list_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/translucent_dark_background"
+        android:visibility="gone"
+        android:clickable="true"
+        tools:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/tv_city_empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/search_entry_background"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:gravity="center"
+                    android:padding="32dp"
+                    android:text="@string/no_city_registered"
+                    fontPath="fonts/OpenSans-Light.ttf"
+                    tools:ignore="MissingPrefix" />
+
+                <Button
+                    android:id="@+id/btn_suggest"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="@string/suggest" />
+            </LinearLayout>
+        </ScrollView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/search_entry_background"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_item_search_city"
+            tools:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

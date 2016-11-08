@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.bclub.widget.CustomCheckbox
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_marginBottom="2dp"
+    android:contentDescription="@string/check"
+    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+    android:drawablePadding="24dp"
+    android:drawableStart="@drawable/custom_check"
+    android:drawableLeft="@drawable/custom_check"
+    android:background="?attr/selectableItemBackground"
+    android:textColor="@color/text_secondary_check"
+    android:padding="16dp"
+    android:button="@null"
+    fontPath="fonts/OpenSans-Light.ttf"
+    tools:text="Categoria"
+    tools:checked="true"
+    tools:ignore="MissingPrefix" />

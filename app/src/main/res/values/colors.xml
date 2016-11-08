@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#EF7A80</color>
+    <color name="accent_dark">#CF6E74</color>
+    <color name="primary">#191919</color>
+    <color name="primary_dark">#000000</color>
+    <color name="divider">#656565</color>
+    <color name="divider_light">#333</color>
+
+    <color name="window_background">#232323</color>
+
+    <color name="workday_background_default">#454545</color>
+    <color name="promotion_card_background">#333333</color>
+    <color name="search_entry_background">#333333</color>
+    <color name="city_background">#222222</color>
+
+    <color name="translucent_dark_background">#F2333333</color>
+
+    <color name="tutorial">#1A1718</color>
+
+    <color name="white">#FFF</color>
+    <color name="red">#F00</color>
+
+    <color name="text_secondary_promotion_detail">#ADAEAF</color>
+    <color name="text_secondary_promotion">#7D7D7D</color>
+    <color name="text_secondary">#898989</color>
+    <color name="text_secondary_check">@color/text_secondary</color>
+</resources>

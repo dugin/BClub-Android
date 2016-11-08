@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ForegroundSelectorImageView">
+        <attr name="foreground" format="color|reference" />
+        <attr name="foregroundColor" format="color|reference" />
+        <attr name="foregroundPadding" format="dimension|reference" />
+        <attr name="circleBackgroundColor" format="color|reference" />
+        <attr name="circleBackgroundColorSelected" format="color|reference" />
+        <attr name="enabledBackgroundTransformation" format="boolean|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="WeekDaysView">
+        <attr name="enabledBackgroundColor" format="reference|color"/>
+        <attr name="backgroundColor" format="reference|color"/>
+        <attr name="enabledTextColor" format="reference|color"/>
+        <attr name="textColor" format="reference|color" />
+        <attr name="spacing" format="reference|dimension" />
+        <attr name="textSize" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CityEditView">
+        <attr name="label_left_align" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AspectLockedImageView">
+        <attr name="aliv__imageAspectRatio" format="dimension"/>
+    </declare-styleable>
+</resources>

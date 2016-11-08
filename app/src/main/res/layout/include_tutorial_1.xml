@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tutorial">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_splash_01"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/tutorial_description"
+            fontPath="fonts/AUSTIN-BOLD.OTF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pager_control"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:minLines="4"
+            android:text="@string/tutorial_1_body_1"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            tools:ignore="MissingPrefix" />
+
+
+        <LinearLayout
+            android:id="@+id/pager_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/panel_button"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:enabled="true"
+                android:background="@drawable/tutorial_indicator"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/tutorial_indicator"
+                android:enabled="false"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/tutorial_indicator"
+                android:enabled="false"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_joined"
+                style="@style/Widget.AppCompat.Button.Colored"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/background_joined"
+                android:padding="@dimen/button_padding"
+                android:text="@string/tutorial_btn_joined"
+                android:textColor="@color/white"
+                tools:ignore="MissingPrefix" />
+
+            <Button
+                android:id="@+id/btn_enter"
+                style="@style/Widget.AppCompat.Button.Colored"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_enter"
+                android:padding="@dimen/button_padding"
+                android:text="@string/tutorial_btn_enter"
+                android:textColor="@color/accent"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

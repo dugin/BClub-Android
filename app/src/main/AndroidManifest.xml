@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.bclub">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="io.bclub.permission.C2D_MESSAGE"/>
+
+        <permission android:name="io.bclub.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <application
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".application.Application">
+
+        <!-- Facebook -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/facebook_app_name" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${google_developers_key}" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activity.TutorialActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activity.MainActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activity.PromotionDetailActivity" />
+
+        <activity
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/filter"
+            android:name=".activity.FilterActivity" />
+        
+        <activity
+            android:screenOrientation="portrait"
+            android:parentActivityName=".activity.MainActivity"
+            android:label="@string/menu"
+            android:name=".activity.MenuActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activity.WebViewActivity" />
+
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:name=".activity.LoginRegistrationActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activity.PlanActivity" />
+
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:name=".activity.RegistrationActivity" />
+
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:name=".activity.UserInformationActivity" />
+
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:name=".activity.BillingInformationActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activity.UserDetailActivity" />
+
+        <receiver android:name="com.backendless.push.BackendlessBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="io.bclub"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>
