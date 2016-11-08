@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="filter_percents">
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </integer-array>
+</resources>

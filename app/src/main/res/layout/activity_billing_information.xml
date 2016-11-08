@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_appbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingLeft="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/accent"
+                    android:text="@string/register"
+                    fontPath="fonts/OpenSans-Light.ttf"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/text_secondary"
+                    android:gravity="end"
+                    android:text="@string/credit_card_info"
+                    fontPath="fonts/OpenSans-Light.ttf"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_complete_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textCursorDrawable="@drawable/white_cursor"
+                android:nextFocusDown="@+id/et_card_number"
+                android:background="@drawable/background_border_grey"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:lines="1"
+                android:hint="@string/card_complete_name"
+                fontPath="fonts/OpenSans-Light.ttf"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/tv_complete_name_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:visibility="gone"
+                android:textColor="@color/red"
+                android:text="@string/invalid_complete_name" />
+
+            <EditText
+                android:id="@+id/et_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textCursorDrawable="@drawable/white_cursor"
+                android:nextFocusDown="@+id/et_card_validity"
+                android:background="@drawable/background_border_grey"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:lines="1"
+                android:hint="@string/card_number"
+                fontPath="fonts/OpenSans-Light.ttf"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/tv_card_number_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:visibility="gone"
+                android:textColor="@color/red"
+                android:text="@string/invalid_card_number" />
+
+            <EditText
+                android:id="@+id/et_card_validity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textCursorDrawable="@drawable/white_cursor"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:nextFocusDown="@+id/et_security_code"
+                android:background="@drawable/background_border_grey"
+                android:imeOptions="actionNext"
+                android:inputType="date"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:lines="1"
+                android:hint="@string/card_validity"
+                fontPath="fonts/OpenSans-Light.ttf"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/tv_validity_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:visibility="gone"
+                android:textColor="@color/red"
+                android:text="@string/invalid_validity" />
+
+            <EditText
+                android:id="@+id/et_security_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textCursorDrawable="@drawable/white_cursor"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:background="@drawable/background_border_grey"
+                android:inputType="number"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:lines="1"
+                android:hint="@string/card_security_code"
+                fontPath="fonts/OpenSans-Light.ttf"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/tv_security_code_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:visibility="gone"
+                android:textColor="@color/red"
+                android:text="@string/invalid_security_code" />
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="@color/white"
+                android:padding="@dimen/button_padding"
+                android:text="@string/advance"
+                fontPath="fonts/OpenSans-Bold.ttf"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

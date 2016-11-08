@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="abc_button_inset_vertical_material"   tools:override="true">0dp</dimen>
+    <dimen name="abc_button_inset_horizontal_material" tools:override="true">0dp</dimen>
+
+    <item name="image_ar" format="float" type="dimen">1.3333</item>
+
+    <dimen name="button_padding">0dp</dimen>
+</resources>

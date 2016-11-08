@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:background="@drawable/background_border_grey"
+        android:imeOptions="actionGo"
+        android:inputType="textCapWords|textNoSuggestions"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:lines="1"
+        android:hint="@string/enter_the_voucher" />
+
+    <TextView
+        android:id="@+id/tv_voucher_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:text="@string/invalid_voucher" />
+</LinearLayout>

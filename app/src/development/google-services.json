@@ -1,0 +1,66 @@
+{
+  "project_info": {
+    "project_number": "258457575465",
+    "firebase_url": "https://bclub-1320.firebaseio.com",
+    "project_id": "bclub-1320",
+    "storage_bucket": "bclub-1320.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258457575465:android:b5c37268f8edf9ef",
+        "android_client_info": {
+          "package_name": "io.bclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258457575465-3q13uasca2bfprp6s3t866asssmvf88l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.bclub",
+            "certificate_hash": "828E6CCF0E5988A63B9E393DDAD539785A1B82F9"
+          }
+        },
+        {
+          "client_id": "258457575465-7v1eckmvnil7atmqlv41bjvaai8dhtco.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "258457575465-fjqqpi8eb651t3jssu2brtq4ih6k60db.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHCKzoQNAZlMNveJAxnPQUc7CGu7nCSrU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258457575465-02rqogl4q0b386su99a5kg13pm2cvs3g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.bclub.grito.bclub"
+              }
+            },
+            {
+              "client_id": "258457575465-7v1eckmvnil7atmqlv41bjvaai8dhtco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

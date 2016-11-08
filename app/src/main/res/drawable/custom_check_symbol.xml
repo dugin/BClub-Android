@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <size android:height="36dp" android:width="36dp" />
+                    <stroke android:color="@color/text_secondary" android:width="2dp" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_check_on" />
+        </layer-list>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="36dp" android:height="36dp" />
+            <stroke android:color="@color/text_secondary" android:width="2dp" />
+        </shape>
+    </item>
+</selector>

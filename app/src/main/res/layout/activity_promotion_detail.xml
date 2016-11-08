@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/include_appbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.samwolfand.aspectlockedimagview.AspectLockedImageView
+                    android:id="@+id/iv_promotion_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/promotion_banner"
+                    android:scaleType="fitCenter"
+                    android:maxHeight="300dp"
+                    app:aliv__imageAspectRatio="@dimen/image_ar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:background="#BF333333">
+
+                    <TextView
+                        android:id="@+id/tv_establishment_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textAllCaps="true"
+                        android:textSize="20sp"
+                        tools:text="Nome do Estabelecimento Lorem Ipsum" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_establishment_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/accent_dark"
+                            tools:text="Salão de Beleza" />
+
+                        <TextView
+                            android:id="@+id/tv_establishment_neighborhood_distance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/text_secondary_promotion_detail"
+                            android:gravity="end"
+                            fontPath="fonts/OpenSans-Light.ttf"
+                            tools:text="Nome - 0.4km"
+                            tools:ignore="MissingPrefix" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/entries_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true" />
+
+            </LinearLayout>
+
+            <include layout="@layout/include_promotion_description" />
+            <include layout="@layout/include_promotion_restrictions" />
+            <include layout="@layout/include_promotion_contact" />
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:tag="MAP_FRAGMENT"
+                app:cameraZoom="16"
+                app:liteMode="true"
+                app:mapType="normal" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

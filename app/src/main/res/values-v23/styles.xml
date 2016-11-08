@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Widget.AppCompat.Button.Colored" parent="@style/Widget.AppTheme.Button.Colored" tools:ignore="PrivateResource" />
+
+    <style name="Widget.AppTheme.Button.Colored" parent="@android:style/Widget.Material.Button.Colored">
+        <item name="android:background">@drawable/__btn_colored_material</item>
+    </style>
+</resources>

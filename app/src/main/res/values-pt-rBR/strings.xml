@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_connectivity">Sem conectividade</string>
+    <string name="not_logged">Não logado</string>
+    <string name="unknown_error">Erro desconhecido</string>
+    <string name="location_not_available">Localização não disponível</string>
+    <string name="problem_with_google_play_services">Houve um problema com o Google Play Services</string>
+    <string name="update_google_play_services">Atualize seu Google Play Services</string>
+
+    <string name="we_need_some_permissions">Precisamos de algumas permissões</string>
+    <string name="location_rationale_message">Por favor, verifique a permissão de localização para permitir que a gente mostre as promoções mais próximas de você.</string>
+
+    <string name="promotion_banner">Banner da promoção</string>
+
+    <string name="no_promotions_available">Não há promoções ainda.</string>
+    <string name="share">Compartilhar Promoções</string>
+
+    <string name="description">Descrição</string>
+    <string name="restrictions">Restrições</string>
+    <string name="contact">Contato</string>
+
+    <string name="abbr_monday">s</string>
+    <string name="abbr_tuesday">t</string>
+    <string name="abbr_wednesday">q</string>
+    <string name="abbr_thursday">q</string>
+    <string name="abbr_friday">s</string>
+    <string name="abbr_saturday">s</string>
+    <string name="abbr_sunday">d</string>
+
+    <string name="monday">Segunda</string>
+    <string name="tuesday">Terça</string>
+    <string name="wednesday">Quarta</string>
+    <string name="thursday">Quinta</string>
+    <string name="friday">Sexta</string>
+    <string name="saturday">Sábado</string>
+    <string name="sunday">Domingo</string>
+
+    <string name="morning">Manhã</string>
+    <string name="afternoon">Tarde</string>
+    <string name="night">Noite</string>
+
+    <string name="from">"de "</string>
+    <string name="to_time">" às "</string>
+    <string name="to">" até "</string>
+    <string name="and">" e "</string>
+    <string name="at_location">" em "</string>
+
+    <string name="promotion_not_available">Promoção não disponível</string>
+
+    <string name="promotions">Promoções</string>
+    <string name="more_info_on">Mais informações em:</string>
+    <string name="send_mail">Enviar e-mail</string>
+
+    <string name="salao_beleza">Salão de Beleza</string>
+    <string name="estudio">Estúdio</string>
+    <string name="clinica_estetica">Clínica de Estética</string>
+
+    <string name="search">Buscar</string>
+    <string name="no_city_registered">Infelizmente o B.Club ainda não chegou nessa cidade.\n\nSugira algum estabelecimento de beleza que você goste nessa cidade para o B.Club.</string>
+    <string name="suggest">Sugerir</string>
+    <string name="suggest_establish_for">Sugerir estabelecimento para %1$s</string>
+
+    <string name="all_cities">Todas as cidades</string>
+    <string name="menu">Menu</string>
+    <string name="filter">Filtros</string>
+
+    <string name="search_what_you_want">Digite o que você procura</string>
+
+    <string name="check">Marcar</string>
+
+    <string name="establishment_categories">Tipo de Estabelecimento</string>
+    <string name="discount">Desconto</string>
+    <string name="days_of_week">Dias da\nSemana</string>
+
+    <string name="login_or_register">Faça login ou registre-se</string>
+    <string name="login">Login</string>
+
+    <string name="how_it_works">Como Funciona</string>
+    <string name="faq">FAQ</string>
+    <string name="legal">Legal</string>
+    <string name="privacy_policy">Política de Privacidade</string>
+    <string name="terms_of_use">Termos de Uso</string>
+
+    <string name="splash_screen_title">Buscando por\nestabelecimentos próximos</string>
+
+    <string name="advance">Avançar</string>
+
+    <string name="tutorial_title">Como funciona?</string>
+
+    <string name="tutorial_btn_enter">ENTRAR</string>
+    <string name="tutorial_btn_joined">ASSINAr</string>
+
+    <string name="tutorial_1_body_1">Faça parte\ndo maior clube\nde vantagens\npara mulheres\ndo Brasil.</string>
+    <string name="tutorial_1_body_2">Escolha um de nossos planos e conheça os benefícios.</string>
+
+    <string name="tutorial_2_body_1">Escolha um de\nnossos planos e\ntenha descontos\nnos melhores\nestabelecimentos.</string>
+    <string name="tutorial_2_body_2">São diversos estabelecimentos em todo o Brasil.</string>
+
+    <string name="tutorial_3_body_1">Encontre os\nmelhores serviços\nde beleza e bem estar\ne gaste até 50% menos!</string>
+    <string name="tutorial_3_body_2">Ganhe descontos todos os dias em todos os serviços cadastrados.</string>
+
+    <string name="valid_subscription">Assinatura válida!</string>
+    <string name="invalid_subscription">Assinatura inválida :(</string>
+    <string name="invalid_subscription_summary">A sua assinatura venceu, mas você só precisa escolher uma das nossas opções de planos e continuar aproveitando os benefícios de fazer parte do maior clube de descontos para mulheres do Brasil.</string>
+    <string name="register">Cadastre-se</string>
+    <string name="registration">Cadastro</string>
+    <string name="best_establishments_best_discounts">Os melhores estabelecimentos.\nOs melhores descontos.</string>
+    <string name="register_summary">Para fazer parte do nosso clube e ganhar descontos nos melhores serviços de beleza do país basta ter um cartão de crédito e escolher um de nossos planos.</string>
+
+    <string name="already_registered">Já sou cadastrado</string>
+    <string name="join_bclub">Entre para o B.Club</string>
+    <string name="choose_plan_to_join_bclub">Escolha um plano e entre para o maior clube de descontos para mulheres do Brasil.</string>
+    <string name="choose_plan">Escolha um plano</string>
+    <string name="join">Entrar</string>
+
+    <string name="type_your_email">Digite seu e-mail aqui</string>
+    <string name="type_your_cpf">Digite seu CPF aqui</string>
+
+    <string name="annual">Assinatura anual</string>
+    <string name="annual_value"><small>R$</small> 108,</string>
+    <string name="annual_decimal">00</string>
+    <string name="annual_summary">40% de desconto, economize R$ 72,00.</string>
+    <string name="annual_button">Fazer assinatura anual</string>
+
+    <string name="six_month">Assinatura semestral</string>
+    <string name="six_month_value"><small>R$</small> 72,</string>
+    <string name="six_month_decimal">00</string>
+    <string name="six_month_summary">20% de desconto, economize R$ 18,00.</string>
+    <string name="six_month_button">Fazer assinatura semestral</string>
+
+    <string name="monthly">Assinatura mensal</string>
+    <string name="monthly_value"><small>R$</small> 15,</string>
+    <string name="monthly_decimal">00</string>
+    <string name="monthly_summary">Conheça os benefícios do B.Club.</string>
+    <string name="monthly_button">Fazer assinatura mensal</string>
+
+    <string name="voucher">Cupom</string>
+    <string name="voucher_plan">Ganhei um cupom para\nconhecer o B.Club!</string>
+    <string name="voucher_summary">Teste por um mês as vantegens do B.Club</string>
+    <string name="voucher_button">testar o B.Club</string>
+
+    <string name="register_with_email">Cadastre-se usando seu e-mail:</string>
+    <string name="voucher_email_subtitle">Aproveite para conhecer o maior clube de descontos para mulheres do Brasil.</string>
+    <string name="voucher_email_summary">Para utilizar seu cupom, digite abaixo o código e o endereço de e-mail utilizado no convite.</string>
+
+    <string name="type_here_your_email">Digite aqui seu e-mail</string>
+    <string name="register_with_email_button">Cadastrar usando e-mail</string>
+
+    <string name="user_info">Dados pessoais</string>
+    <string name="credit_card_info">Dados do cartão</string>
+
+    <string name="invalid_email">E-mail inválido</string>
+    <string name="invalid_cpf">CPF inválido</string>
+    <string name="invalid_name">Nome inválido</string>
+    <string name="invalid_surname">Sobrenome inválido</string>
+    <string name="invalid_telephone">Telegone inválido</string>
+    <string name="invalid_birthdate">Data de nascimento inválida</string>
+    <string name="invalid_gender">Gênero inválido</string>
+
+    <string name="invalid_address">Endereço inválido</string>
+    <string name="invalid_cep">CEP inválido</string>
+    <string name="invalid_complement">Complemento inválido</string>
+    <string name="invalid_state">Estado inválido</string>
+    <string name="invalid_city">Cidade inválida</string>
+
+    <string name="name">Nome</string>
+    <string name="surname">Sobrenome</string>
+    <string name="cpf">CPF</string>
+    <string name="gender">Gênero</string>
+    <string name="birthdate">Data de nascimento</string>
+    <string name="telephone">Telefone</string>
+
+    <string name="address">Endereço</string>
+    <string name="complement">Complemento</string>
+    <string name="cep">CEP</string>
+    <string name="state">Estado</string>
+    <string name="city">Cidade</string>
+
+    <string name="card_complete_name">Nome completo</string>
+    <string name="card_number">Número do cartão</string>
+    <string name="card_validity">Data de validade (mm/aa)</string>
+    <string name="card_security_code">Código de segurança</string>
+
+    <string name="invalid_complete_name">Nome completo inválido</string>
+    <string name="invalid_card_number">Número do cartão inválido</string>
+    <string name="invalid_validity">Data de validade inválida</string>
+    <string name="invalid_security_code">Código de segurança inválido</string>
+
+    <string name="invalid_email_or_cpf">e-mail ou CPF inválido</string>
+    <string name="must_confirm_email">Você deve confirmar o e-mail antes de realizar o login.</string>
+
+    <string name="enter_the_voucher">Digite aqui o código do cupom de desconto</string>
+    <string name="invalid_voucher">Voucher inválido</string>
+    <string name="valid_voucher">Voucher válido</string>
+
+    <string name="user_registered_title">Cadastro realizado com sucesso!</string>
+    <string name="user_registered_summary">Nós enviamos um e-mail para confirmar seu cadastro.\nFaça login após a confirmação</string>
+
+    <string name="confirm_email_title">Confirmação</string>
+    <string name="confirm_email_summary">Você deve confirmar seu e-mail antes de logar.</string>
+    <string name="confirm_email_neutral">Re-enviar e-mail de confirmação</string>
+
+    <string name="user_not_found">Usuário não encontrado</string>
+    <string name="confirmation_email_sent">E-mail de confirmação enviado</string>
+
+    <string name="read_and_accept">"Li e concordo com os "</string>
+    <string name="terms_and_conditions">Termos e Condições</string>
+
+    <string name="view_account">Minha conta</string>
+
+    <string name="activated_at">Ativada em</string>
+    <string name="pricing">Parcelamento</string>
+    <string name="valid_until">Expira em</string>
+
+    <string name="my_bclub">Meu B.Club</string>
+    <string name="of">de</string>
+
+    <string name="subscription_created_with_success">Assinatura criada com sucesso</string>
+    <string name="card_declined">Seu cartão foi recusado pelo nosso processador de pagamentos. Tente outro cartão</string>
+    <string name="card_processing_failed">A cobrança do seu cartão falhou no nosso processador de pagamentos. Tente outro cartão.</string>
+</resources>
